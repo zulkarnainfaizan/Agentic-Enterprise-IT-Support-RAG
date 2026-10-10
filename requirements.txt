@@ -11,3 +11,4 @@ pinecone==7.3.0
 sentence-transformers==6.0.0
 beautifulsoup4==4.15.0
 python-dotenv==1.2.3
+python-docx==1.2.0
