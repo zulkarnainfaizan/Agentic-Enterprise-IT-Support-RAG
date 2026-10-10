@@ -5,7 +5,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 BASE_DIR = Path(__file__).resolve().parents[2]
 
 class Settings(BaseSettings):
-    app_name: str = "Agentic Enterprise IT Support RAG"
+    app_name: str = "agentic-enterprise-it-support-rag"
     app_env: str = "development"
     openai_api_key: str =""
     # groq_api_key: str =""
@@ -21,7 +21,7 @@ class Settings(BaseSettings):
     admin_api_key: str = "admin-secret-key"
     audit_db_path: str = str(BASE_DIR / "data" / "audit.db")
     upload_dir: str = str(BASE_DIR / "uploads")
-    sample_kb_dir: str = str(BASE_DIR / "data" / "sample_kb.json")
+    sample_kb_dir: str = str(BASE_DIR / "data" / "sample_kb")
 
     model_config = SettingsConfigDict(env_file=str(BASE_DIR / ".env"), env_file_encoding="utf-8")
 
