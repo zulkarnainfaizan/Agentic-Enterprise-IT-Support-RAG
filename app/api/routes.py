@@ -35,7 +35,7 @@ def chat(payload: ChatRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e)) from e
 
-router.post("/ingest")
+@router.post("/ingest")
 async def ingest(file: UploadFile = File(...), x_admin_key: str = Header(default="")):
     if x_admin_key != settings.admin_api_key:
         raise HTTPException(status_code=401, detail="Invalid admin key")
